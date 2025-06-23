@@ -1,4 +1,29 @@
 {
+  "cv_title": "Curriculum Vitae",
+  "education_title": "Formation",
+  "education_list": [
+    "Sup Galilée – Apprenti ingénieur informatique – 2023/2026",
+    "Sup Galilée – Classe préparatoire intégrée – 2021/2023",
+    "Lycée privé Rocroy Saint-Vincent de Paul – Bac S – 2018/2021"
+  ],
+  "experience_title": "Expériences professionnelles",
+  "experience_list": [
+    "Alternant Data Engineer – Groupama (Puteaux) – 2023-aujourd’hui",
+    "Membre du BDE – Villetaneuse – Organisation d’événements et clubs – 2023-aujourd’hui",
+    "Agent de bureau de vote – Mairie de Paris – 2022"
+  ],
+  "skills_title": "Compétences",
+  "skills_list": [
+    "Langages : Python, C/C++, SQL, Matlab, Java, Scala, Javascript, HTML, CSS",
+    "Technologies : Spark, Git, NextJS, Linux, Environnement Hadoop",
+    "Compétences : Algorithmie, Créativité, Curiosité, Autonomie, Travail en équipe"
+  ],
+  "languages_title": "Langues",
+  "languages_list": [
+    "Français : langue maternelle",
+    "Anglais : courant",
+    "Espagnol : intermédiaire"
+  ],
   "interests_title": "Centres d'intérêt",
   "interests_list": [
     "Voyages : Amérique du Nord, Europe, Afrique",
