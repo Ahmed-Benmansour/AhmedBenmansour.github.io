@@ -1,66 +1,70 @@
 <!DOCTYPE html>
-<html lang="fr" prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/">
+<html prefix="foaf: http://xmlns.com/foaf/0.1/ dc: http://purl.org/dc/terms/ schema: http://schema.org/">
 <head>
-  <meta charset="UTF-8">
-  <title>CV - Ahmed Benmansour</title>
-  <link rel="stylesheet" href="assets/style.css">
+  <meta charset="UTF-8" />
+  <title property="dc:title">CV - Ahmed Benmansour</title>
+  <meta property="dc:creator" content="Ahmed Benmansour" />
+  <meta property="dc:language" content="fr" />
+  <link rel="stylesheet" href="assets/style.css" />
+  <script src="assets/lang.js"></script>
 </head>
-<body typeof="foaf:Person" about="#cv">
+<body typeof="foaf:Person" about="#me">
   <header>
-    <h1 property="foaf:name">Ahmed Benmansour</h1>
-    <p property="foaf:mbox" content="mailto:benmansour3a1@gmail.com">benmansour3a1@gmail.com</p>
-    <p><a href="https://www.linkedin.com/in/ahmed-benmansour-851428262/" target="_blank">LinkedIn</a></p>
+    <h1 id="name" property="foaf:name">Ahmed Benmansour</h1>
+    <p id="title" property="foaf:title"></p>
   </header>
 
-  <main>
-    <section>
-      <h2>🧑‍💻 Profil</h2>
-      <p property="dc:description">Étudiant en 2e année d'ingénierie informatique, motivé et curieux, à la recherche d’un stage de 8 semaines à l’international dans le domaine de la data.</p>
-    </section>
+  <nav typeof="schema:SiteNavigationElement">
+    <a href="index.html" id="nav_home">🏠</a>
+    <a href="#" onclick="setLang('fr')">🇫🇷</a>
+    <a href="#" onclick="setLang('en')">🇬🇧</a>
+    <a href="#" onclick="setLang('ar')">🇸🇦</a>
+    <a href="#" onclick="setLang('ja')">🇯🇵</a>
+  </nav>
 
-    <section>
-      <h2>💼 Expériences</h2>
+  <main typeof="schema:WebPage" about="#cv">
+    <h2 id="cv_title" property="dc:title"></h2>
+    <section typeof="schema:WebPageElement">
+      <h3 id="profile" property="dc:title"></h3>
+      <p property="dc:description">Ahmed Benmansour, passionné par les systèmes d'information et le web sémantique.</p>
+    </section>
+    <section typeof="schema:WebPageElement">
+      <h3 id="experience" property="dc:title"></h3>
       <ul>
-        <li>Data Engineer - Groupama Support (2023–aujourd’hui)</li>
-        <li>Membre du BDE - Villetaneuse (2023–aujourd’hui)</li>
-        <li>Agent de bureau de vote - Mairie de Paris (2022)</li>
+        <li>Alternance chez GRDF - Projet Speakylink, VSIC, VIGIK</li>
+        <li>Alternance chez Groupama - Projet MRI, EasyParc</li>
       </ul>
     </section>
-
-    <section>
-      <h2>🎓 Formation</h2>
+    <section typeof="schema:WebPageElement">
+      <h3 id="education" property="dc:title"></h3>
       <ul>
-        <li>Sup Galilée, Cycle Ingénieur (2023–2026)</li>
-        <li>Sup Galilée, Classe Prépa intégrée (2021–2023)</li>
-        <li>Lycée Rocroy Saint-Vincent de Paul (2018–2021)</li>
+        <li>Ingénierie Informatique - Institut Galilée</li>
+        <li>Licence Informatique - Paris 13</li>
       </ul>
     </section>
-
-    <section>
-      <h2>🛠️ Compétences</h2>
+    <section typeof="schema:WebPageElement">
+      <h3 id="skills" property="dc:title"></h3>
       <ul>
-        <li>Langages : Python, C/C++, Java, Scala, HTML/CSS, JS</li>
-        <li>Technos : SQL, Spark, Git, Hadoop, NextJS, Linux</li>
+        <li>Data Science, Python, SQL</li>
+        <li>Web Sémantique, RDFa, XSLT, XML</li>
       </ul>
     </section>
-
-    <section>
-      <h2>🗣️ Langues</h2>
+    <section typeof="schema:WebPageElement">
+      <h3 id="languages" property="dc:title"></h3>
       <ul>
-        <li>Français : natif</li>
-        <li>Anglais : courant</li>
-        <li>Espagnol : intermédiaire</li>
+        <li>Français, Anglais, Arabe, Japonais</li>
       </ul>
     </section>
-
-    <section>
-      <h2>🎨 Loisirs</h2>
-      <p>Voyages (Amérique du Nord, Europe, Afrique), dessin, jeux vidéo, films/séries, culture japonaise.</p>
+    <section typeof="schema:WebPageElement">
+      <h3 id="hobbies" property="dc:title"></h3>
+      <ul>
+        <li>Voyages, Sport, Développement web</li>
+      </ul>
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Ahmed Benmansour</p>
+  <footer typeof="schema:WPFooter">
+    <p property="dc:rights">&copy; 2025 Ahmed Benmansour — RDFa | UTF-8 | FOAF | DC</p>
   </footer>
 </body>
 </html>
