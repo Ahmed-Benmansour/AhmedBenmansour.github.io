@@ -1,3 +1,21 @@
 {
-  "language": "japonais"
+  "nav_home": "ホーム",
+  "nav_cv": "履歴書",
+  "name": "アフメド・ベンマンスール",
+  "title": "情報工学の学生",
+  "semantic_title": "🧠 セマンティック・ウェブ",
+  "semantic_p1": "このプロジェクトでセマンティック・ウェブの重要性を理解できました。",
+  "semantic_p2": "RDFa、FOAF、DC、XML/XSLT を使用して、多言語・構造化されたページを作成しました。",
+  "about_title": "📄 自己紹介",
+  "about_text": "データ、システム、ウェブ技術に情熱を持つ学生です。",
+  "projects_title": "📁 プロジェクト",
+  "project1": "EasyParc プロジェクト：スマート駐車管理システム。",
+  "project2": "MRI プロジェクト：バッチ処理の自動監視。",
+  "cv_title": "履歴書",
+  "profile": "プロフィール",
+  "experience": "職歴",
+  "education": "学歴",
+  "skills": "スキル",
+  "languages": "言語",
+  "hobbies": "趣味"
 }
