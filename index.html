@@ -1,46 +1,12 @@
 <!DOCTYPE html>
-<html lang="fr" prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/">
+<html lang="fr" prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/ schema: http://schema.org/">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title property="dc:title">Portfolio multilingue - Ahmed Benmansour</title>
   <meta property="dc:creator" content="Ahmed Benmansour" />
   <meta property="dc:language" content="fr" />
-  <meta property="dc:description" content="Portfolio sémantique multilingue d’Ahmed Benmansour, mettant en pratique RDFa, FOAF et Dublin Core." />
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f5f5f5;
-      padding: 2em;
-      max-width: 900px;
-      margin: auto;
-      line-height: 1.6;
-      color: #333;
-    }
-    header, footer {
-      background-color: #e8e8e8;
-      padding: 1em;
-      border-radius: 6px;
-      margin-bottom: 2em;
-    }
-    nav {
-      margin-bottom: 1.5em;
-      text-align: center;
-    }
-    nav a {
-      margin: 0 0.5em;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    h1, h2 {
-      color: #2c3e50;
-    }
-    ul li {
-      margin-bottom: 0.5em;
-    }
-    section {
-      margin-bottom: 2em;
-    }
-  </style>
+  <meta property="dc:description" content="Portfolio multilingue avec RDFa, FOAF, DC et contenu dynamique." />
+  <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body typeof="foaf:Person" about="#me">
   <nav>
@@ -48,101 +14,70 @@
     <a href="#" onclick="setLang('en')">🇬🇧 English</a>
     <a href="#" onclick="setLang('ar')">🇸🇦 العربية</a>
     <a href="#" onclick="setLang('ja')">🇯🇵 日本語</a>
+    <a href="cv.html">📄 Mon CV</a>
   </nav>
 
-  <header typeof="foaf:Person" about="#me" resource="#me">
-    <link property="foaf:homepage" href="https://github.com/ahmedbenmansour/portfolio" />
-    <link property="foaf:workplaceHomepage" href="https://galilee.univ-paris13.fr/" />
+  <header>
     <h1 property="foaf:name" id="name"></h1>
     <p><span property="foaf:title" id="title"></span></p>
     <p><span property="foaf:mbox" content="mailto:ahmed@example.com">ahmed@example.com</span></p>
-</header>
+  </header>
 
-  <main typeof="schema:WebPage" about="#portfolio">
-    <section typeof="foaf:Document" about="#websem">
-      <meta property="dc:subject" content="Web sémantique, RDFa, XML, UTF-8" />
-      <meta property="dc:creator" content="Ahmed Benmansour" />
-      <h2 property="dc:title" id="semantic_title"></h2>
-      <p property="dc:description" id="semantic_p1"></p>
-      <p property="dc:description" id="semantic_p2"></p>
-      <p property="dc:description">
-        <strong>En complément :</strong> grâce à l'utilisation d'outils comme <code>XML</code>, <code>DTD</code>, <code>XSL</code> et <code>XSLT</code>, j’ai pu manipuler les données et leur affichage de manière sémantique. L'encodage <code>UTF-8</code> permet la transcription correcte de toutes les langues. Les vocabulaires <code>RDF</code> permettent enfin de relier toutes ces données dans un graphe interrogeable.
-      </p>
+  <main typeof="schema:WebPage">
+    <section>
+      <h2 id="semantic_title"></h2>
+      <p id="semantic_p1"></p>
+      <p id="semantic_p2"></p>
     </section>
-
-    <section typeof="foaf:Document" about="#aboutme">
-      <h2 property="dc:title" id="about_title"></h2>
-      <p property="dc:description" id="about_text"></p>
+    <section>
+      <h2 id="about_title"></h2>
+      <p id="about_text"></p>
     </section>
-
-    <section typeof="foaf:Document" about="#projects">
-      <h2 property="dc:title" id="projects_title"></h2>
+    <section>
+      <h2 id="projects_title"></h2>
       <ul>
-        <li><span property="dc:title" id="project1"></span></li>
-        <li><span property="dc:title" id="project2"></span></li>
+        <li id="project1"></li>
+        <li id="project2"></li>
       </ul>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Ahmed Benmansour — UTF-8 | RDFa | XSLT | XML</p>
+    <p>&copy; 2025 Ahmed Benmansour</p>
   </footer>
 
+  <script src="lang/fr.json" type="application/json" id="lang-fr"></script>
+  <script src="lang/en.json" type="application/json" id="lang-en"></script>
   <script>
     const translations = {
       fr: {
         name: "Ahmed Benmansour",
         title: "Étudiant en ingénierie informatique",
         semantic_title: "🧠 Web sémantique",
-        semantic_p1: "Ce projet m'a permis de comprendre l'importance du Web sémantique : au-delà du HTML classique, il permet de structurer les données pour les rendre compréhensibles par les machines.",
-        semantic_p2: "L'intégration de vocabulaires comme RDFa, FOAF et DC, combinée à des technologies XML/XSLT, m'a permis de créer des pages dynamiques, structurées, interopérables et multilingues.",
+        semantic_p1: "Ce projet m’a permis de comprendre l’importance du Web sémantique.",
+        semantic_p2: "Avec RDFa, FOAF, DC, XML/XSLT, j’ai structuré un contenu multilingue et accessible.",
         about_title: "📄 À propos",
-        about_text: "Je suis un étudiant passionné par la data, les systèmes et les technologies web. Ce site est une démonstration de mes compétences en web sémantique et en développement multilingue.",
+        about_text: "Étudiant passionné de data, systèmes et technologies web.",
         projects_title: "📁 Projets",
-        project1: "Projet EasyParc : système de gestion de parking connecté.",
-        project2: "Projet MRI : supervision automatisée de batchs."
+        project1: "Projet EasyParc : parking intelligent",
+        project2: "Projet MRI : supervision des batchs"
       },
       en: {
         name: "Ahmed Benmansour",
         title: "Computer engineering student",
         semantic_title: "🧠 Semantic Web",
-        semantic_p1: "This project helped me understand the importance of the Semantic Web: beyond basic HTML, it structures data to be machine-readable.",
-        semantic_p2: "Using vocabularies like RDFa, FOAF and DC, along with XML/XSLT technologies, I built dynamic, structured, multilingual and interoperable pages.",
+        semantic_p1: "This project helped me understand the Semantic Web.",
+        semantic_p2: "With RDFa, FOAF, DC, XML/XSLT, I structured multilingual accessible content.",
         about_title: "📄 About",
-        about_text: "I’m a student passionate about data, systems and web technologies. This site showcases my skills in semantic web and multilingual development.",
+        about_text: "Student passionate about data, systems and web technologies.",
         projects_title: "📁 Projects",
-        project1: "EasyParc Project: smart parking management system.",
-        project2: "MRI Project: automated batch monitoring."
-      },
-      ar: {
-        name: "أحمد بن منصور",
-        title: "طالب هندسة معلوماتية",
-        semantic_title: "🧠 الويب الدلالي",
-        semantic_p1: "هذا المشروع ساعدني على فهم أهمية الويب الدلالي: أكثر من HTML بسيط، فهو ينظم البيانات لتكون مفهومة آلياً.",
-        semantic_p2: "باستخدام مفردات مثل RDFa و FOAF و DC، إلى جانب تقنيات XML/XSLT، أنشأت صفحات ديناميكية، منظمة، ومتعددة اللغات.",
-        about_title: "📄 من أنا",
-        about_text: "أنا طالب شغوف بالبيانات والأنظمة وتقنيات الويب. هذا الموقع يُظهر مهاراتي في الويب الدلالي والتطوير متعدد اللغات.",
-        projects_title: "📁 المشاريع",
-        project1: "مشروع EasyParc: نظام ذكي لإدارة مواقف السيارات.",
-        project2: "مشروع MRI: مراقبة مؤتمتة للمعالجات الدفعية."
-      },
-      ja: {
-        name: "アフメド・ベンマンスール",
-        title: "情報工学の学生",
-        semantic_title: "🧠 セマンティック・ウェブ",
-        semantic_p1: "このプロジェクトでセマンティック・ウェブの重要性を理解できました。HTML以上に、データを機械が読めるように構造化します。",
-        semantic_p2: "RDFa、FOAF、DCの語彙とXML/XSLTの技術を活用して、多言語・構造化・相互運用可能な動的ページを作成しました。",
-        about_title: "📄 自己紹介",
-        about_text: "私はデータ、システム、ウェブ技術に情熱を持つ学生です。このサイトはセマンティックウェブと多言語開発のスキルを示しています。",
-        projects_title: "📁 プロジェクト",
-        project1: "EasyParc プロジェクト：スマートパーキング管理システム。",
-        project2: "MRI プロジェクト：バッチ処理の自動監視。"
+        project1: "EasyParc Project: smart parking",
+        project2: "MRI Project: batch supervision"
       }
     };
 
     function setLang(lang) {
       const t = translations[lang];
-      if (!t) return;
       document.getElementById("name").textContent = t.name;
       document.getElementById("title").textContent = t.title;
       document.getElementById("semantic_title").textContent = t.semantic_title;
@@ -156,7 +91,7 @@
       document.documentElement.lang = lang;
     }
 
-    window.addEventListener('DOMContentLoaded', () => setLang('fr'));
+    window.onload = () => setLang('fr');
   </script>
 </body>
 </html>
