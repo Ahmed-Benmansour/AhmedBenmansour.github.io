@@ -50,27 +50,33 @@
     <a href="#" onclick="setLang('ja')">🇯🇵 日本語</a>
   </nav>
 
-  <header>
+  <header typeof="foaf:Person" about="#me" resource="#me">
+    <link property="foaf:homepage" href="https://github.com/ahmedbenmansour/portfolio" />
+    <link property="foaf:workplaceHomepage" href="https://galilee.univ-paris13.fr/" />
     <h1 property="foaf:name" id="name"></h1>
-    <p property="foaf:title" id="title"></p>
-    <p><span property="foaf:mbox">ahmed@example.com</span></p>
-  </header>
+    <p><span property="foaf:title" id="title"></span></p>
+    <p><span property="foaf:mbox" content="mailto:ahmed@example.com">ahmed@example.com</span></p>
+</header>
 
-  <main>
-    <section>
-      <h2 id="semantic_title"></h2>
-      <p id="semantic_p1"></p>
-      <p id="semantic_p2"></p>
-      <p><strong>En complément :</strong> grâce à l'utilisation d'outils comme <code>XML</code> (langage structuré), les <code>DTD</code> (définitions de structure), <code>XSL</code> (transformation en HTML) et <code>XSLT</code> (logique de rendu conditionnelle), j’ai pu manipuler les données et leur affichage de manière souple et sémantique. De plus, l'encodage <code>UTF-8</code> permet d'inclure naturellement des langues non latines (comme l'arabe ou le japonais) sans perte d'information, en assurant une compatibilité universelle. Enfin, les <code>RDF</code> (Resource Description Framework) permettent de relier les informations dans un graphe de connaissance interrogeable par des langages comme <code>SPARQL</code>.</p>
+  <main typeof="schema:WebPage" about="#portfolio">
+    <section typeof="foaf:Document" about="#websem">
+      <meta property="dc:subject" content="Web sémantique, RDFa, XML, UTF-8" />
+      <meta property="dc:creator" content="Ahmed Benmansour" />
+      <h2 property="dc:title" id="semantic_title"></h2>
+      <p property="dc:description" id="semantic_p1"></p>
+      <p property="dc:description" id="semantic_p2"></p>
+      <p property="dc:description">
+        <strong>En complément :</strong> grâce à l'utilisation d'outils comme <code>XML</code>, <code>DTD</code>, <code>XSL</code> et <code>XSLT</code>, j’ai pu manipuler les données et leur affichage de manière sémantique. L'encodage <code>UTF-8</code> permet la transcription correcte de toutes les langues. Les vocabulaires <code>RDF</code> permettent enfin de relier toutes ces données dans un graphe interrogeable.
+      </p>
     </section>
 
-    <section>
-      <h2 id="about_title"></h2>
-      <p id="about_text" property="dc:description"></p>
+    <section typeof="foaf:Document" about="#aboutme">
+      <h2 property="dc:title" id="about_title"></h2>
+      <p property="dc:description" id="about_text"></p>
     </section>
 
-    <section>
-      <h2 id="projects_title"></h2>
+    <section typeof="foaf:Document" about="#projects">
+      <h2 property="dc:title" id="projects_title"></h2>
       <ul>
         <li><span property="dc:title" id="project1"></span></li>
         <li><span property="dc:title" id="project2"></span></li>
