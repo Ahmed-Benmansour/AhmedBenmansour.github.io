@@ -1,11 +1,68 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr"
+      prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/">
 <head>
-    <meta charset="UTF-8">
-    <title>Portfolio de Ahmed Benmansour</title>
+  <meta charset="UTF-8" />
+  <title>Portfolio d'Ahmed Benmansour</title>
+
+  <!-- RDFa : Métadonnées pour le référencement -->
+  <meta property="dc:title" content="Portfolio d'Ahmed Benmansour" />
+  <meta property="dc:creator" content="Ahmed Benmansour" />
+  <meta property="dc:language" content="fr" />
+  <meta property="dc:description" content="Portfolio multilingue d'Ahmed, étudiant en ingénierie informatique." />
+  <link rel="alternate" hreflang="en" href="index.php?lang=en" />
+  <link rel="alternate" hreflang="ar" href="index.php?lang=ar" />
 </head>
-<body>
-    <h1>Bonjour</h1>
-    <p>Vous vous trouvez sur le portfolio de Ahmed Benmansour.</p>
+
+<body typeof="foaf:Person" about="#me">
+  <header>
+    <h1 property="foaf:name">Ahmed Benmansour</h1>
+    <p>
+      <span property="foaf:title">Étudiant en ingénierie informatique</span><br>
+      <span property="foaf:mbox" content="mailto:ahmed@example.com">ahmed@example.com</span>
+    </p>
+    <!-- Choix de langue -->
+    <nav>
+      <a href="?lang=fr">🇫🇷 Français</a> |
+      <a href="?lang=en">🇬🇧 English</a> |
+      <a href="?lang=ar">🇸🇦 العربية</a>
+    </nav>
+  </header>
+
+  <main>
+    <section typeof="foaf:Document">
+      <h2 property="dc:title">À propos de moi</h2>
+      <p property="dc:description">
+        Je suis un étudiant en deuxième année d'école d'ingénieurs à l'Institut Galilée, passionné par les données, les systèmes et le web sémantique.
+      </p>
+    </section>
+
+    <section typeof="foaf:Document">
+      <h2 property="dc:title">Projets</h2>
+      <ul>
+        <li>
+          <span property="dc:title">Projet EasyParc</span> – Analyse et traitement des flux de données d'activité.
+        </li>
+        <li>
+          <span property="dc:title">Projet MRI</span> – Surveillance automatisée de traitements batchs.
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Vidéo de présentation</h2>
+      <video controls>
+        <source src="video/presentation_fr.mp4" type="video/mp4" lang="fr" />
+        <track src="subtitles/fr.vtt" kind="subtitles" srclang="fr" label="Français" default />
+        <track src="subtitles/en.vtt" kind="subtitles" srclang="en" label="English" />
+        <track src="subtitles/ar.vtt" kind="subtitles" srclang="ar" label="العربية" />
+        Votre navigateur ne supporte pas la vidéo HTML5.
+      </video>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Ahmed Benmansour</p>
+  </footer>
 </body>
 </html>
