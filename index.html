@@ -1,49 +1,22 @@
 <!DOCTYPE html>
-<html prefix="foaf: http://xmlns.com/foaf/0.1/ dc: http://purl.org/dc/terms/ schema: http://schema.org/">
+<html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <title property="dc:title">Portfolio multilingue - Ahmed Benmansour</title>
-  <meta property="dc:creator" content="Ahmed Benmansour" />
-  <meta property="dc:language" content="fr" />
+  <title>Portfolio multilingue - Ahmed Benmansour</title>
   <link rel="stylesheet" href="assets/style.css" />
-  <script src="assets/lang.js"></script>
 </head>
-<body typeof="foaf:Person" about="#me">
-  <header>
-    <h1 id="name" property="foaf:name">Ahmed Benmansour</h1>
-    <p id="title" property="foaf:title"></p>
-  </header>
+<body>
+  <div class="lang-switch">
+    <button onclick="setLang('fr')">🇫🇷</button>
+    <button onclick="setLang('en')">🇬🇧</button>
+    <button onclick="setLang('ar')">🇸🇦</button>
+    <button onclick="setLang('ja')">🇯🇵</button>
+  </div>
 
-  <nav typeof="schema:SiteNavigationElement">
-    <a href="#" onclick="setLang('fr')">🇫🇷</a>
-    <a href="#" onclick="setLang('en')">🇬🇧</a>
-    <a href="#" onclick="setLang('ar')">🇸🇦</a>
-    <a href="#" onclick="setLang('ja')">🇯🇵</a>
-    <a href="cv.html" id="nav_cv">CV</a>
-  </nav>
+  <h1 id="name"></h1>
+  <p id="description"></p>
+  <a href="cv.html" id="cv_link"></a>
 
-  <main typeof="schema:WebPage">
-    <section typeof="schema:WebPageElement">
-      <h2 id="semantic_title" property="dc:title"></h2>
-      <p id="semantic_p1" property="dc:description"></p>
-      <p id="semantic_p2" property="dc:description"></p>
-    </section>
-    <section typeof="schema:WebPageElement" about="#about">
-      <h2 id="about_title" property="dc:title"></h2>
-      <p id="about_text" property="dc:description"></p>
-    </section>
-    <section typeof="schema:WebPageElement" about="#projects">
-      <h2 id="projects_title" property="dc:title"></h2>
-      <ul>
-        <li id="project1" property="dc:title"></li>
-        <li id="project2" property="dc:title"></li>
-      </ul>
-    </section>
-  </main>
-
-  <footer typeof="schema:WPFooter">
-    <a href="index.html" id="nav_home">🏠</a>
-    <p property="dc:rights">&copy; 2025 Ahmed Benmansour — UTF-8 | RDFa | XSLT | XML</p>
-  </footer>
+  <script src="assets/script.js"></script>
 </body>
 </html>

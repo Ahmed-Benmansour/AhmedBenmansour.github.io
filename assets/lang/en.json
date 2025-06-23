@@ -1,0 +1,29 @@
+{
+  "name": "Ahmed Benmansour",
+  "description": "Welcome to my multilingual portfolio.",
+  "cv_link": "My Resume",
+  "cv_title": "Curriculum Vitae",
+  "education_title": "Education",
+  "education_list": [
+    "University of Paris 13 – Sup Galilée – 2nd Year Computer Engineering",
+    "Jean Zay High School – CPGE MPSI",
+    "Paul Éluard High School – Science Baccalaureate"
+  ],
+  "experience_title": "Professional Experience",
+  "experience_list": [
+    "Apprentice Data Engineer – Groupama",
+    "Student Union Member – Event Organization",
+    "Voting Office Agent – Paris Town Hall"
+  ],
+  "skills_title": "Skills",
+  "skills_list": [
+    "Languages: Python, C/C++, SQL, Java, Scala, JS, HTML/CSS, Matlab",
+    "Technologies: Spark, Hadoop, Git, NextJS, Linux"
+  ],
+  "languages_title": "Languages",
+  "languages_list": [
+    "French: native",
+    "English: fluent",
+    "Spanish: intermediate"
+  ]
+}

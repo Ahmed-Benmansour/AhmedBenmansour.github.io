@@ -1,70 +1,37 @@
 <!DOCTYPE html>
-<html prefix="foaf: http://xmlns.com/foaf/0.1/ dc: http://purl.org/dc/terms/ schema: http://schema.org/">
+<html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <title property="dc:title">CV - Ahmed Benmansour</title>
-  <meta property="dc:creator" content="Ahmed Benmansour" />
-  <meta property="dc:language" content="fr" />
+  <title>CV - Ahmed Benmansour</title>
   <link rel="stylesheet" href="assets/style.css" />
-  <script src="assets/lang.js"></script>
 </head>
-<body typeof="foaf:Person" about="#me">
-  <header>
-    <h1 id="name" property="foaf:name">Ahmed Benmansour</h1>
-    <p id="title" property="foaf:title"></p>
-  </header>
+<body>
+  <div class="lang-switch">
+    <a href="index.html">🏠 Accueil</a>
+    <button onclick="setLang('fr')">🇫🇷</button>
+    <button onclick="setLang('en')">🇬🇧</button>
+    <button onclick="setLang('ar')">🇸🇦</button>
+    <button onclick="setLang('ja')">🇯🇵</button>
+  </div>
 
-  <nav typeof="schema:SiteNavigationElement">
-    <a href="index.html" id="nav_home">🏠</a>
-    <a href="#" onclick="setLang('fr')">🇫🇷</a>
-    <a href="#" onclick="setLang('en')">🇬🇧</a>
-    <a href="#" onclick="setLang('ar')">🇸🇦</a>
-    <a href="#" onclick="setLang('ja')">🇯🇵</a>
-  </nav>
+  <h1 id="cv_title"></h1>
+  <section>
+    <h2 id="education_title"></h2>
+    <ul id="education_list"></ul>
+  </section>
+  <section>
+    <h2 id="experience_title"></h2>
+    <ul id="experience_list"></ul>
+  </section>
+  <section>
+    <h2 id="skills_title"></h2>
+    <ul id="skills_list"></ul>
+  </section>
+  <section>
+    <h2 id="languages_title"></h2>
+    <ul id="languages_list"></ul>
+  </section>
 
-  <main typeof="schema:WebPage" about="#cv">
-    <h2 id="cv_title" property="dc:title"></h2>
-    <section typeof="schema:WebPageElement">
-      <h3 id="profile" property="dc:title"></h3>
-      <p property="dc:description">Ahmed Benmansour, passionné par les systèmes d'information et le web sémantique.</p>
-    </section>
-    <section typeof="schema:WebPageElement">
-      <h3 id="experience" property="dc:title"></h3>
-      <ul>
-        <li>Alternance chez GRDF - Projet Speakylink, VSIC, VIGIK</li>
-        <li>Alternance chez Groupama - Projet MRI, EasyParc</li>
-      </ul>
-    </section>
-    <section typeof="schema:WebPageElement">
-      <h3 id="education" property="dc:title"></h3>
-      <ul>
-        <li>Ingénierie Informatique - Institut Galilée</li>
-        <li>Licence Informatique - Paris 13</li>
-      </ul>
-    </section>
-    <section typeof="schema:WebPageElement">
-      <h3 id="skills" property="dc:title"></h3>
-      <ul>
-        <li>Data Science, Python, SQL</li>
-        <li>Web Sémantique, RDFa, XSLT, XML</li>
-      </ul>
-    </section>
-    <section typeof="schema:WebPageElement">
-      <h3 id="languages" property="dc:title"></h3>
-      <ul>
-        <li>Français, Anglais, Arabe, Japonais</li>
-      </ul>
-    </section>
-    <section typeof="schema:WebPageElement">
-      <h3 id="hobbies" property="dc:title"></h3>
-      <ul>
-        <li>Voyages, Sport, Développement web</li>
-      </ul>
-    </section>
-  </main>
-
-  <footer typeof="schema:WPFooter">
-    <p property="dc:rights">&copy; 2025 Ahmed Benmansour — RDFa | UTF-8 | FOAF | DC</p>
-  </footer>
+  <script src="assets/script.js"></script>
 </body>
 </html>

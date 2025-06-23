@@ -1,0 +1,29 @@
+{
+  "name": "アフメド・ベンマンスール",
+  "description": "多言語ポートフォリオへようこそ。",
+  "cv_link": "履歴書",
+  "cv_title": "履歴書",
+  "education_title": "学歴",
+  "education_list": [
+    "パリ第13大学 – Sup Galilée – 情報工学2年",
+    "ジャン・ザイ高校 – CPGE MPSI",
+    "ポール・エリュアール高校 – 理系バカロレア"
+  ],
+  "experience_title": "職務経験",
+  "experience_list": [
+    "データエンジニア研修生 – Groupama",
+    "BDEメンバー – イベント企画",
+    "投票所係員 – パリ市役所"
+  ],
+  "skills_title": "スキル",
+  "skills_list": [
+    "言語: Python, C/C++, SQL, Java, Scala, JS, HTML/CSS, Matlab",
+    "技術: Spark, Hadoop, Git, NextJS, Linux"
+  ],
+  "languages_title": "言語",
+  "languages_list": [
+    "フランス語: ネイティブ",
+    "英語: 流暢",
+    "スペイン語: 中級"
+  ]
+}

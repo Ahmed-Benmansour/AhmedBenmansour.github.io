@@ -1,0 +1,29 @@
+{
+  "name": "أحمد بن منصور",
+  "description": "مرحبًا بكم في معرض أعمالي المتعدد اللغات.",
+  "cv_link": "السيرة الذاتية",
+  "cv_title": "السيرة الذاتية",
+  "education_title": "التعليم",
+  "education_list": [
+    "جامعة باريس 13 – سوب غاليلي – السنة الثانية هندسة معلوماتية",
+    "ثانوية جان زي – CPGE MPSI",
+    "ثانوية بول إيلوار – بكالوريا علمية"
+  ],
+  "experience_title": "الخبرات المهنية",
+  "experience_list": [
+    "مهندس بيانات متدرب – Groupama",
+    "عضو BDE – تنظيم فعاليات",
+    "موظف مكتب تصويت – بلدية باريس"
+  ],
+  "skills_title": "المهارات",
+  "skills_list": [
+    "اللغات: Python, C/C++, SQL, Java, Scala, JS, HTML/CSS, Matlab",
+    "التقنيات: Spark, Hadoop, Git, NextJS, Linux"
+  ],
+  "languages_title": "اللغات",
+  "languages_list": [
+    "الفرنسية: لغة أم",
+    "الإنجليزية: بطلاقة",
+    "الإسبانية: متوسطة"
+  ]
+}
