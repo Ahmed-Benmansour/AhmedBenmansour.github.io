@@ -1,37 +1,37 @@
-
 <!DOCTYPE html>
-
-<html lang="fr" prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/">
+<html lang="fr">
 <head>
-<meta charset="utf-8"/>
-<title>CV - Ahmed Benmansour</title>
-<link href="assets/style.css" rel="stylesheet"/>
+  <meta charset="UTF-8" />
+  <title>CV - Ahmed Benmansour</title>
+  <link rel="stylesheet" href="assets/style.css" />
 </head>
-<body about="#ahmed" typeof="foaf:Person">
-<div class="lang-switch">
-<a href="index.html">🏠 Accueil</a>
-<button onclick="setLang('fr')">🇫🇷</button>
-<button onclick="setLang('en')">🇬🇧</button>
-<button onclick="setLang('ar')">🇸🇦</button>
-<button onclick="setLang('ja')">🇯🇵</button>
-</div>
-<h1 id="cv_title" property="foaf:name"></h1>
-<section about="#cv-education" typeof="foaf:Document">
-<h2 id="education_title"></h2>
-<ul data-rdfa-property="dc:education" id="education_list"></ul>
-</section>
-<section about="#cv-experience" typeof="foaf:Document">
-<h2 id="experience_title"></h2>
-<ul data-rdfa-property="dc:description" id="experience_list"></ul>
-</section>
-<section about="#cv-skills" typeof="foaf:Document">
-<h2 id="skills_title"></h2>
-<ul data-rdfa-property="dc:subject" id="skills_list"></ul>
-</section>
-<section about="#cv-languages" typeof="foaf:Document">
-<h2 id="languages_title"></h2>
-<ul data-rdfa-property="dc:language" id="languages_list"></ul>
-</section><section about="#cv-interests" id="interests" typeof="foaf:Document"><h2 id="interests_title" property="dc:title"></h2><ul data-rdfa-property="dc:subject" id="interests_list"></ul></section>
-<script src="assets/script.js"></script>
+<body>
+  <div class="lang-switch">
+    <a href="index.html">🏠 Accueil</a>
+    <button onclick="setLang('fr')">🇫🇷</button>
+    <button onclick="setLang('en')">🇬🇧</button>
+    <button onclick="setLang('ar')">🇸🇦</button>
+    <button onclick="setLang('ja')">🇯🇵</button>
+  </div>
+
+  <h1 id="cv_title"></h1>
+  <section>
+    <h2 id="education_title"></h2>
+    <ul id="education_list"></ul>
+  </section>
+  <section>
+    <h2 id="experience_title"></h2>
+    <ul id="experience_list"></ul>
+  </section>
+  <section>
+    <h2 id="skills_title"></h2>
+    <ul id="skills_list"></ul>
+  </section>
+  <section>
+    <h2 id="languages_title"></h2>
+    <ul id="languages_list"></ul>
+  </section>
+
+  <script src="assets/script.js"></script>
 </body>
 </html>
