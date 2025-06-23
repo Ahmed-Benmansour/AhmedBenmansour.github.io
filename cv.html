@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/">
 <head>
   <meta charset="UTF-8" />
-  <title>CV - Ahmed Benmansour</title>
+  <title property="dc:title">CV - Ahmed Benmansour</title>
   <link rel="stylesheet" href="assets/style.css" />
 </head>
-<body>
+<body typeof="foaf:Person" about="#ahmed">
   <div class="lang-switch">
     <a href="index.html">🏠 Accueil</a>
     <button onclick="setLang('fr')">🇫🇷</button>
@@ -14,22 +14,34 @@
     <button onclick="setLang('ja')">🇯🇵</button>
   </div>
 
-  <h1 id="cv_title"></h1>
-  <section>
-    <h2 id="education_title"></h2>
-    <ul id="education_list"></ul>
+  <h1 id="cv_title" property="dc:title"></h1>
+
+  <section typeof="foaf:Document" about="#cv-education">
+    <h2 id="education_title" property="dc:title"></h2>
+    <ul id="education_list">
+      <!-- Les <li> seront dynamiquement ajoutés avec property="dc:education" dans JS -->
+    </ul>
   </section>
-  <section>
-    <h2 id="experience_title"></h2>
-    <ul id="experience_list"></ul>
+
+  <section typeof="foaf:Document" about="#cv-experience">
+    <h2 id="experience_title" property="dc:title"></h2>
+    <ul id="experience_list">
+      <!-- <li property="dc:description"> via JS -->
+    </ul>
   </section>
-  <section>
-    <h2 id="skills_title"></h2>
-    <ul id="skills_list"></ul>
+
+  <section typeof="foaf:Document" about="#cv-skills">
+    <h2 id="skills_title" property="dc:title"></h2>
+    <ul id="skills_list">
+      <!-- <li property="dc:subject"> via JS -->
+    </ul>
   </section>
-  <section>
-    <h2 id="languages_title"></h2>
-    <ul id="languages_list"></ul>
+
+  <section typeof="foaf:Document" about="#cv-languages">
+    <h2 id="languages_title" property="dc:title"></h2>
+    <ul id="languages_list">
+      <!-- <li property="dc:language"> via JS -->
+    </ul>
   </section>
 
   <script src="assets/script.js"></script>
