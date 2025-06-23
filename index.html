@@ -1,97 +1,49 @@
 <!DOCTYPE html>
-<html lang="fr" prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/ schema: http://schema.org/">
+<html prefix="foaf: http://xmlns.com/foaf/0.1/ dc: http://purl.org/dc/terms/ schema: http://schema.org/">
 <head>
   <meta charset="UTF-8" />
   <title property="dc:title">Portfolio multilingue - Ahmed Benmansour</title>
   <meta property="dc:creator" content="Ahmed Benmansour" />
   <meta property="dc:language" content="fr" />
-  <meta property="dc:description" content="Portfolio multilingue avec RDFa, FOAF, DC et contenu dynamique." />
   <link rel="stylesheet" href="assets/style.css" />
+  <script src="assets/lang.js"></script>
 </head>
 <body typeof="foaf:Person" about="#me">
-  <nav>
-    <a href="#" onclick="setLang('fr')">🇫🇷 Français</a>
-    <a href="#" onclick="setLang('en')">🇬🇧 English</a>
-    <a href="#" onclick="setLang('ar')">🇸🇦 العربية</a>
-    <a href="#" onclick="setLang('ja')">🇯🇵 日本語</a>
-    <a href="cv.html">📄 Mon CV</a>
-  </nav>
-
   <header>
-    <h1 property="foaf:name" id="name"></h1>
-    <p><span property="foaf:title" id="title"></span></p>
-    <p><span property="foaf:mbox" content="mailto:ahmed@example.com">ahmed@example.com</span></p>
+    <h1 id="name" property="foaf:name">Ahmed Benmansour</h1>
+    <p id="title" property="foaf:title"></p>
   </header>
 
+  <nav typeof="schema:SiteNavigationElement">
+    <a href="#" onclick="setLang('fr')">🇫🇷</a>
+    <a href="#" onclick="setLang('en')">🇬🇧</a>
+    <a href="#" onclick="setLang('ar')">🇸🇦</a>
+    <a href="#" onclick="setLang('ja')">🇯🇵</a>
+    <a href="cv.html" id="nav_cv">CV</a>
+  </nav>
+
   <main typeof="schema:WebPage">
-    <section>
-      <h2 id="semantic_title"></h2>
-      <p id="semantic_p1"></p>
-      <p id="semantic_p2"></p>
+    <section typeof="schema:WebPageElement">
+      <h2 id="semantic_title" property="dc:title"></h2>
+      <p id="semantic_p1" property="dc:description"></p>
+      <p id="semantic_p2" property="dc:description"></p>
     </section>
-    <section>
-      <h2 id="about_title"></h2>
-      <p id="about_text"></p>
+    <section typeof="schema:WebPageElement" about="#about">
+      <h2 id="about_title" property="dc:title"></h2>
+      <p id="about_text" property="dc:description"></p>
     </section>
-    <section>
-      <h2 id="projects_title"></h2>
+    <section typeof="schema:WebPageElement" about="#projects">
+      <h2 id="projects_title" property="dc:title"></h2>
       <ul>
-        <li id="project1"></li>
-        <li id="project2"></li>
+        <li id="project1" property="dc:title"></li>
+        <li id="project2" property="dc:title"></li>
       </ul>
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Ahmed Benmansour</p>
+  <footer typeof="schema:WPFooter">
+    <a href="index.html" id="nav_home">🏠</a>
+    <p property="dc:rights">&copy; 2025 Ahmed Benmansour — UTF-8 | RDFa | XSLT | XML</p>
   </footer>
-
-  <script src="lang/fr.json" type="application/json" id="lang-fr"></script>
-  <script src="lang/en.json" type="application/json" id="lang-en"></script>
-  <script>
-    const translations = {
-      fr: {
-        name: "Ahmed Benmansour",
-        title: "Étudiant en ingénierie informatique",
-        semantic_title: "🧠 Web sémantique",
-        semantic_p1: "Ce projet m’a permis de comprendre l’importance du Web sémantique.",
-        semantic_p2: "Avec RDFa, FOAF, DC, XML/XSLT, j’ai structuré un contenu multilingue et accessible.",
-        about_title: "📄 À propos",
-        about_text: "Étudiant passionné de data, systèmes et technologies web.",
-        projects_title: "📁 Projets",
-        project1: "Projet EasyParc : parking intelligent",
-        project2: "Projet MRI : supervision des batchs"
-      },
-      en: {
-        name: "Ahmed Benmansour",
-        title: "Computer engineering student",
-        semantic_title: "🧠 Semantic Web",
-        semantic_p1: "This project helped me understand the Semantic Web.",
-        semantic_p2: "With RDFa, FOAF, DC, XML/XSLT, I structured multilingual accessible content.",
-        about_title: "📄 About",
-        about_text: "Student passionate about data, systems and web technologies.",
-        projects_title: "📁 Projects",
-        project1: "EasyParc Project: smart parking",
-        project2: "MRI Project: batch supervision"
-      }
-    };
-
-    function setLang(lang) {
-      const t = translations[lang];
-      document.getElementById("name").textContent = t.name;
-      document.getElementById("title").textContent = t.title;
-      document.getElementById("semantic_title").textContent = t.semantic_title;
-      document.getElementById("semantic_p1").textContent = t.semantic_p1;
-      document.getElementById("semantic_p2").textContent = t.semantic_p2;
-      document.getElementById("about_title").textContent = t.about_title;
-      document.getElementById("about_text").textContent = t.about_text;
-      document.getElementById("projects_title").textContent = t.projects_title;
-      document.getElementById("project1").textContent = t.project1;
-      document.getElementById("project2").textContent = t.project2;
-      document.documentElement.lang = lang;
-    }
-
-    window.onload = () => setLang('fr');
-  </script>
 </body>
 </html>
