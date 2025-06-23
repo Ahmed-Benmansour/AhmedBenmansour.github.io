@@ -1,28 +1,29 @@
 {
   "name": "Ahmed Benmansour",
-  "description": "Bienvenue sur mon portfolio multilingue.",
+  "description": "Étudiant en 2ᵉ année à Sup Galilée, motivé, à la recherche d’un stage international de 8 semaines en informatique orienté data. Intéressé par un environnement dynamique pour développer mes compétences techniques et professionnelles.",
   "cv_link": "Mon CV",
   "cv_title": "Curriculum Vitae",
   "education_title": "Formation",
   "education_list": [
-    "Université Paris 13 – Sup Galilée – ING2 Informatique",
-    "Lycée Jean Zay – CPGE MPSI",
-    "Lycée Paul Éluard – Bac S"
+    "Sup Galilée – Apprenti ingénieur informatique – 2023/2026",
+    "Sup Galilée – Classe préparatoire intégrée – 2021/2023",
+    "Lycée privé Rocroy Saint-Vincent de Paul – Bac S – 2018/2021"
   ],
   "experience_title": "Expériences professionnelles",
   "experience_list": [
-    "Alternant Data Engineer – Groupama",
-    "Membre du BDE – Organisation d’événements",
-    "Agent de bureau de vote – Mairie de Paris"
+    "Alternant Data Engineer – Groupama (Puteaux) – 2023-aujourd’hui",
+    "Membre du BDE – Villetaneuse – Organisation d’événements et clubs – 2023-aujourd’hui",
+    "Agent de bureau de vote – Mairie de Paris – 2022"
   ],
   "skills_title": "Compétences",
   "skills_list": [
-    "Langages : Python, C/C++, SQL, Java, Scala, JS, HTML/CSS, Matlab",
-    "Technologies : Spark, Hadoop, Git, NextJS, Linux"
+    "Langages : Python, C/C++, SQL, Matlab, Java, Scala, Javascript, HTML, CSS",
+    "Technologies : Spark, Git, NextJS, Linux, Environnement Hadoop",
+    "Compétences : Algorithmie, Créativité, Curiosité, Autonomie, Travail en équipe"
   ],
   "languages_title": "Langues",
   "languages_list": [
-    "Français : natif",
+    "Français : langue maternelle",
     "Anglais : courant",
     "Espagnol : intermédiaire"
   ]

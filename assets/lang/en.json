@@ -1,24 +1,25 @@
 {
   "name": "Ahmed Benmansour",
-  "description": "Welcome to my multilingual portfolio.",
-  "cv_link": "My Resume",
+  "description": "Second-year student at Sup Galilée, motivated, looking for an 8-week international internship in data-oriented computer science. Interested in a dynamic environment to develop my technical and professional skills.",
+  "cv_link": "My CV",
   "cv_title": "Curriculum Vitae",
   "education_title": "Education",
   "education_list": [
-    "University of Paris 13 – Sup Galilée – 2nd Year Computer Engineering",
-    "Jean Zay High School – CPGE MPSI",
-    "Paul Éluard High School – Science Baccalaureate"
+    "Sup Galilée – Apprentice Computer Engineer – 2023/2026",
+    "Sup Galilée – Integrated Preparatory Class – 2021/2023",
+    "Rocroy Saint-Vincent de Paul High School – Scientific Baccalaureate – 2018/2021"
   ],
   "experience_title": "Professional Experience",
   "experience_list": [
-    "Apprentice Data Engineer – Groupama",
-    "Student Union Member – Event Organization",
-    "Voting Office Agent – Paris Town Hall"
+    "Data Engineer Apprentice – Groupama (Puteaux) – 2023–present",
+    "BDE Member – Villetaneuse – Event and club organization – 2023–present",
+    "Poll Clerk – Paris City Hall – 2022"
   ],
   "skills_title": "Skills",
   "skills_list": [
-    "Languages: Python, C/C++, SQL, Java, Scala, JS, HTML/CSS, Matlab",
-    "Technologies: Spark, Hadoop, Git, NextJS, Linux"
+    "Languages: Python, C/C++, SQL, Matlab, Java, Scala, Javascript, HTML, CSS",
+    "Technologies: Spark, Git, NextJS, Linux, Hadoop environment",
+    "Skills: Algorithms, Creativity, Curiosity, Autonomy, Teamwork"
   ],
   "languages_title": "Languages",
   "languages_list": [

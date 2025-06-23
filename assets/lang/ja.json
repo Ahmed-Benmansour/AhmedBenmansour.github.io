@@ -1,29 +1,30 @@
 {
   "name": "アフメド・ベンマンスール",
-  "description": "多言語ポートフォリオへようこそ。",
+  "description": "Sup Galiléeの2年生、意欲的で、データ指向のIT分野で8週間の国際インターンシップを探しています。技術的・専門的スキルを伸ばすため、活気ある環境に関心があります。",
   "cv_link": "履歴書",
   "cv_title": "履歴書",
   "education_title": "学歴",
   "education_list": [
-    "パリ第13大学 – Sup Galilée – 情報工学2年",
-    "ジャン・ザイ高校 – CPGE MPSI",
-    "ポール・エリュアール高校 – 理系バカロレア"
+    "Sup Galilée – コンピューターエンジニア研修生 – 2023/2026",
+    "Sup Galilée – 統合準備クラス – 2021/2023",
+    "Rocroy Saint-Vincent de Paul 高校 – 理系バカロレア – 2018/2021"
   ],
-  "experience_title": "職務経験",
+  "experience_title": "職歴",
   "experience_list": [
-    "データエンジニア研修生 – Groupama",
-    "BDEメンバー – イベント企画",
-    "投票所係員 – パリ市役所"
+    "データエンジニア研修生 – Groupama（ピュトー）– 2023年〜現在",
+    "BDEメンバー – Villetaneuse – イベントとクラブの運営 – 2023年〜現在",
+    "投票所スタッフ – パリ市役所 – 2022年"
   ],
   "skills_title": "スキル",
   "skills_list": [
-    "言語: Python, C/C++, SQL, Java, Scala, JS, HTML/CSS, Matlab",
-    "技術: Spark, Hadoop, Git, NextJS, Linux"
+    "言語: Python, C/C++, SQL, Matlab, Java, Scala, Javascript, HTML, CSS",
+    "技術: Spark, Git, NextJS, Linux, Hadoop環境",
+    "スキル: アルゴリズム、創造力、好奇心、自立性、チームワーク"
   ],
   "languages_title": "言語",
   "languages_list": [
-    "フランス語: ネイティブ",
-    "英語: 流暢",
-    "スペイン語: 中級"
+    "フランス語：ネイティブ",
+    "英語：流暢",
+    "スペイン語：中級"
   ]
 }
