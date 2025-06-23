@@ -1,68 +1,99 @@
 <!DOCTYPE html>
-<html lang="fr"
+<html lang="fr" 
       prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/">
 <head>
-  <meta charset="UTF-8" />
-  <title>Portfolio d'Ahmed Benmansour</title>
-
-  <!-- RDFa : Métadonnées pour le référencement -->
-  <meta property="dc:title" content="Portfolio d'Ahmed Benmansour" />
-  <meta property="dc:creator" content="Ahmed Benmansour" />
-  <meta property="dc:language" content="fr" />
-  <meta property="dc:description" content="Portfolio multilingue d'Ahmed, étudiant en ingénierie informatique." />
-  <link rel="alternate" hreflang="en" href="index.php?lang=en" />
-  <link rel="alternate" hreflang="ar" href="index.php?lang=ar" />
+  <meta charset="UTF-8">
+  <title property="dc:title">Portfolio multilingue</title>
+  <style>
+    body { font-family: sans-serif; padding: 1em; }
+    nav button { margin: 0.5em; }
+  </style>
 </head>
 
 <body typeof="foaf:Person" about="#me">
+  <!-- Navigation Langue -->
+  <nav>
+    <button onclick="setLang('fr')">🇫🇷 Français</button>
+    <button onclick="setLang('en')">🇬🇧 English</button>
+    <button onclick="setLang('ar')">🇸🇦 العربية</button>
+  </nav>
+
+  <!-- Contenu -->
   <header>
-    <h1 property="foaf:name">Ahmed Benmansour</h1>
-    <p>
-      <span property="foaf:title">Étudiant en ingénierie informatique</span><br>
-      <span property="foaf:mbox" content="mailto:ahmed@example.com">ahmed@example.com</span>
-    </p>
-    <!-- Choix de langue -->
-    <nav>
-      <a href="?lang=fr">🇫🇷 Français</a> |
-      <a href="?lang=en">🇬🇧 English</a> |
-      <a href="?lang=ar">🇸🇦 العربية</a>
-    </nav>
+    <h1 property="foaf:name" id="name">Ahmed Benmansour</h1>
+    <p><span property="foaf:title" id="title"></span></p>
+    <p><span property="foaf:mbox">ahmed@example.com</span></p>
   </header>
 
   <main>
     <section typeof="foaf:Document">
-      <h2 property="dc:title">À propos de moi</h2>
-      <p property="dc:description">
-        Je suis un étudiant en deuxième année d'école d'ingénieurs à l'Institut Galilée, passionné par les données, les systèmes et le web sémantique.
-      </p>
+      <h2 id="about_title"></h2>
+      <p id="about_text" property="dc:description"></p>
     </section>
 
     <section typeof="foaf:Document">
-      <h2 property="dc:title">Projets</h2>
+      <h2 id="projects_title"></h2>
       <ul>
-        <li>
-          <span property="dc:title">Projet EasyParc</span> – Analyse et traitement des flux de données d'activité.
-        </li>
-        <li>
-          <span property="dc:title">Projet MRI</span> – Surveillance automatisée de traitements batchs.
-        </li>
+        <li><span property="dc:title" id="project1"></span></li>
+        <li><span property="dc:title" id="project2"></span></li>
       </ul>
     </section>
 
     <section>
-      <h2>Vidéo de présentation</h2>
-      <video controls>
-        <source src="video/presentation_fr.mp4" type="video/mp4" lang="fr" />
-        <track src="subtitles/fr.vtt" kind="subtitles" srclang="fr" label="Français" default />
-        <track src="subtitles/en.vtt" kind="subtitles" srclang="en" label="English" />
-        <track src="subtitles/ar.vtt" kind="subtitles" srclang="ar" label="العربية" />
-        Votre navigateur ne supporte pas la vidéo HTML5.
+      <h2 id="video_title"></h2>
+      <video controls width="400">
+        <source src="video.mp4" type="video/mp4">
+        Votre navigateur ne supporte pas la vidéo.
       </video>
     </section>
   </main>
 
-  <footer>
-    <p>© 2025 Ahmed Benmansour</p>
-  </footer>
+  <!-- Script de traduction -->
+  <script>
+    const translations = {
+      fr: {
+        title: "Étudiant en ingénierie informatique",
+        about_title: "À propos de moi",
+        about_text: "Je suis un étudiant passionné par la data et les technologies web.",
+        projects_title: "Projets",
+        project1: "Projet EasyParc",
+        project2: "Projet MRI",
+        video_title: "Vidéo de présentation"
+      },
+      en: {
+        title: "Engineering student in computer science",
+        about_title: "About me",
+        about_text: "I am a student passionate about data and web technologies.",
+        projects_title: "Projects",
+        project1: "EasyParc Project",
+        project2: "MRI Project",
+        video_title: "Presentation video"
+      },
+      ar: {
+        title: "طالب هندسة معلوماتية",
+        about_title: "من أنا",
+        about_text: "أنا طالب شغوف بالبيانات وتقنيات الويب.",
+        projects_title: "المشاريع",
+        project1: "مشروع EasyParc",
+        project2: "مشروع MRI",
+        video_title: "فيديو تقديمي"
+      }
+    };
+
+    function setLang(lang) {
+      const t = translations[lang];
+      document.getElementById('title').textContent = t.title;
+      document.getElementById('about_title').textContent = t.about_title;
+      document.getElementById('about_text').textContent = t.about_text;
+      document.getElementById('projects_title').textContent = t.projects_title;
+      document.getElementById('project1').textContent = t.project1;
+      document.getElementById('project2').textContent = t.project2;
+      document.getElementById('video_title').textContent = t.video_title;
+      document.documentElement.lang = lang;
+    }
+
+    // Langue par défaut au chargement
+    setLang('fr');
+  </script>
 </body>
 </html>
