@@ -1,33 +1,29 @@
 {
+  "name": "アフメド・ベンマンスール",
+  "description": "多言語ポートフォリオへようこそ。",
+  "cv_link": "履歴書",
   "cv_title": "履歴書",
   "education_title": "学歴",
   "education_list": [
-    "Sup Galilée – コンピューターエンジニア研修生 – 2023/2026",
-    "Sup Galilée – 統合準備クラス – 2021/2023",
-    "Rocroy Saint-Vincent de Paul 高校 – 理系バカロレア – 2018/2021"
+    "パリ第13大学 – Sup Galilée – 情報工学2年",
+    "ジャン・ザイ高校 – CPGE MPSI",
+    "ポール・エリュアール高校 – 理系バカロレア"
   ],
-  "experience_title": "職歴",
+  "experience_title": "職務経験",
   "experience_list": [
-    "データエンジニア研修生 – Groupama（ピュトー）– 2023年〜現在",
-    "BDEメンバー – Villetaneuse – イベントとクラブの運営 – 2023年〜現在",
-    "投票所スタッフ – パリ市役所 – 2022年"
+    "データエンジニア研修生 – Groupama",
+    "BDEメンバー – イベント企画",
+    "投票所係員 – パリ市役所"
   ],
   "skills_title": "スキル",
   "skills_list": [
-    "言語: Python, C/C++, SQL, Matlab, Java, Scala, Javascript, HTML, CSS",
-    "技術: Spark, Git, NextJS, Linux, Hadoop環境",
-    "スキル: アルゴリズム、創造力、好奇心、自立性、チームワーク"
+    "言語: Python, C/C++, SQL, Java, Scala, JS, HTML/CSS, Matlab",
+    "技術: Spark, Hadoop, Git, NextJS, Linux"
   ],
   "languages_title": "言語",
   "languages_list": [
-    "フランス語：ネイティブ",
-    "英語：流暢",
-    "スペイン語：中級"
-  ],
-  "interests_title": "興味・関心",
-  "interests_list": [
-    "旅行：北アメリカ、ヨーロッパ、アフリカ",
-    "絵を描くこと、ビデオゲーム、映画・ドラマ",
-    "日本文化"
+    "フランス語: ネイティブ",
+    "英語: 流暢",
+    "スペイン語: 中級"
   ]
 }
