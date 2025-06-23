@@ -1,99 +1,125 @@
 <!DOCTYPE html>
-<html lang="fr" 
-      prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/">
+<html lang="fr" prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/">
 <head>
   <meta charset="UTF-8">
-  <title property="dc:title">Portfolio multilingue</title>
+  <title property="dc:title">Portfolio multilingue - Ahmed Benmansour</title>
+  <meta property="dc:creator" content="Ahmed Benmansour" />
+  <meta property="dc:language" content="fr" />
+  <meta property="dc:description" content="Portfolio sémantique multilingue d’Ahmed Benmansour, mettant en pratique RDFa, FOAF et Dublin Core." />
   <style>
-    body { font-family: sans-serif; padding: 1em; }
-    nav button { margin: 0.5em; }
+    body { font-family: sans-serif; padding: 1em; max-width: 800px; margin: auto; }
+    nav { margin-bottom: 1em; }
+    h1, h2 { color: #2c3e50; }
   </style>
 </head>
-
 <body typeof="foaf:Person" about="#me">
-  <!-- Navigation Langue -->
   <nav>
-    <button onclick="setLang('fr')">🇫🇷 Français</button>
-    <button onclick="setLang('en')">🇬🇧 English</button>
-    <button onclick="setLang('ar')">🇸🇦 العربية</button>
+    <a href="#" onclick="setLang('fr')">🇫🇷 Français</a> |
+    <a href="#" onclick="setLang('en')">🇬🇧 English</a> |
+    <a href="#" onclick="setLang('ar')">🇸🇦 العربية</a> |
+    <a href="#" onclick="setLang('ja')">🇯🇵 日本語</a>
   </nav>
 
-  <!-- Contenu -->
   <header>
-    <h1 property="foaf:name" id="name">Ahmed Benmansour</h1>
-    <p><span property="foaf:title" id="title"></span></p>
+    <h1 property="foaf:name" id="name"></h1>
+    <p property="foaf:title" id="title"></p>
     <p><span property="foaf:mbox">ahmed@example.com</span></p>
   </header>
 
   <main>
-    <section typeof="foaf:Document">
+    <section>
+      <h2 id="semantic_title"></h2>
+      <p id="semantic_p1"></p>
+      <p id="semantic_p2"></p>
+    </section>
+
+    <section>
       <h2 id="about_title"></h2>
       <p id="about_text" property="dc:description"></p>
     </section>
 
-    <section typeof="foaf:Document">
+    <section>
       <h2 id="projects_title"></h2>
       <ul>
         <li><span property="dc:title" id="project1"></span></li>
         <li><span property="dc:title" id="project2"></span></li>
       </ul>
     </section>
-
-    <section>
-      <h2 id="video_title"></h2>
-      <video controls width="400">
-        <source src="video.mp4" type="video/mp4">
-        Votre navigateur ne supporte pas la vidéo.
-      </video>
-    </section>
   </main>
 
-  <!-- Script de traduction -->
+  <footer>
+    <p>&copy; 2025 Ahmed Benmansour</p>
+  </footer>
+
   <script>
     const translations = {
       fr: {
-        title: "Étudiant en ingénierie informatique",
-        about_title: "À propos de moi",
-        about_text: "Je suis un étudiant passionné par la data et les technologies web.",
-        projects_title: "Projets",
-        project1: "Projet EasyParc",
-        project2: "Projet MRI",
-        video_title: "Vidéo de présentation"
+        name: "Ahmed Benmansour",
+        title: "Etudiant en ingénierie informatique",
+        semantic_title: "🧠 Web sémantique",
+        semantic_p1: "Ce projet m'a permis de comprendre l'importance du Web sémantique : au-delà du HTML classique, il permet de décrire les données de manière compréhensible pour les machines. En utilisant les vocabulaires DC (Dublin Core) et FOAF (Friend of a Friend), j'ai enrichi mes pages avec des métadonnées RDFa facilitant l'indexation, l'interopérabilité et la réutilisation des données.",
+        semantic_p2: "Cette approche m'a apporté une meilleure compréhension de l'écosystème des données liées (Linked Data) et des technologies associées comme RDF, SPARQL et schema.org. Ça m'ouvre des perspectives vers les applications intelligentes et l'accessibilité universelle du Web.",
+        about_title: "📄 À propos",
+        about_text: "Je suis un étudiant passionné par la data, les systèmes et les technologies web, actuellement en 2ème année à l'Institut Galilée. Ce site multilingue est une mise en pratique de mes compétences techniques, linguistiques et sémantiques.",
+        projects_title: "📁 Projets",
+        project1: "Projet EasyParc : Système de gestion de stationnement connecté.",
+        project2: "Projet MRI : Surveillance automatisée de traitements batchs."
       },
       en: {
-        title: "Engineering student in computer science",
-        about_title: "About me",
-        about_text: "I am a student passionate about data and web technologies.",
-        projects_title: "Projects",
-        project1: "EasyParc Project",
-        project2: "MRI Project",
-        video_title: "Presentation video"
+        name: "Ahmed Benmansour",
+        title: "Computer engineering student",
+        semantic_title: "🧠 Semantic Web",
+        semantic_p1: "This project helped me understand the importance of the Semantic Web: beyond classical HTML, it allows data to be described in a machine-readable way. Using DC (Dublin Core) and FOAF (Friend of a Friend), I enriched my pages with RDFa metadata, improving indexing, interoperability, and reuse.",
+        semantic_p2: "This approach gave me a better understanding of the Linked Data ecosystem and related technologies like RDF, SPARQL, and schema.org. It opens up opportunities for intelligent applications and universal web accessibility.",
+        about_title: "📄 About",
+        about_text: "I am a student passionate about data, systems, and web technologies, currently in my second year at Institut Galilée. This multilingual site is a practical application of my technical, linguistic, and semantic skills.",
+        projects_title: "📁 Projects",
+        project1: "EasyParc Project: Smart parking management system.",
+        project2: "MRI Project: Automated monitoring of batch processing."
       },
       ar: {
+        name: "أحمد بن منصور",
         title: "طالب هندسة معلوماتية",
-        about_title: "من أنا",
-        about_text: "أنا طالب شغوف بالبيانات وتقنيات الويب.",
-        projects_title: "المشاريع",
-        project1: "مشروع EasyParc",
-        project2: "مشروع MRI",
-        video_title: "فيديو تقديمي"
+        semantic_title: "🧠 الويب الدلالي",
+        semantic_p1: "هذا المشروع ساعدني على فهم أهمية الويب الدلالي: بالإضافة إلى HTML التقليدي، يسمح بوصف البيانات بطريقة مفهومة للآلات. باستخدام DC وFOAF، أضفت بيانات وصفية RDFa تسهّل الفهرسة والتشغيل البيني وإعادة الاستخدام.",
+        semantic_p2: "أعطاني هذا النهج فهماً أعمق لنظام البيانات المترابطة (Linked Data) والتقنيات المرتبطة مثل RDF وSPARQL وschema.org. ويفتح لي آفاقاً نحو تطبيقات ذكية وإتاحة عالمية للويب.",
+        about_title: "📄 من أنا",
+        about_text: "أنا طالب شغوف بالبيانات والأنظمة وتقنيات الويب، أدرس حالياً في السنة الثانية في معهد جاليلي. هذا الموقع متعدد اللغات هو تطبيق عملي لمهاراتي التقنية واللغوية والدلالية.",
+        projects_title: "📁 المشاريع",
+        project1: "مشروع EasyParc: نظام ذكي لإدارة مواقف السيارات.",
+        project2: "مشروع MRI: مراقبة مؤتمتة للمعالجات الدفعية."
+      },
+      ja: {
+        name: "アフメド・ベンマンスール",
+        title: "情報工学の学生",
+        semantic_title: "🧠 セマンティック・ウェブ",
+        semantic_p1: "このプロジェクトを通じて、セマンティック・ウェブの重要性を理解できました。HTML以上に、機械が理解できる方法でデータを記述できます。DCやFOAFを使ってRDFaメタデータを追加し、インデックス作成、相互運用性、再利用性を高めました。",
+        semantic_p2: "この手法により、Linked DataエコシステムやRDF、SPARQL、schema.orgなどの関連技術についての理解が深まりました。これはインテリジェントなアプリケーションとWebのユニバーサル・アクセシビリティへの扉を開いてくれます。",
+        about_title: "📄 自己紹介",
+        about_text: "私はデータやシステム、Web技術に情熱を持つ学生で、現在ガリレオ研究所の2年生です。この多言語サイトは、私の技術・言語・意味論のスキルを実践的に活かしたものです。",
+        projects_title: "📁 プロジェクト",
+        project1: "EasyParc プロジェクト：スマートパーキング管理システム。",
+        project2: "MRI プロジェクト：バッチ処理の自動監視。"
       }
     };
 
     function setLang(lang) {
       const t = translations[lang];
-      document.getElementById('title').textContent = t.title;
-      document.getElementById('about_title').textContent = t.about_title;
-      document.getElementById('about_text').textContent = t.about_text;
-      document.getElementById('projects_title').textContent = t.projects_title;
-      document.getElementById('project1').textContent = t.project1;
-      document.getElementById('project2').textContent = t.project2;
-      document.getElementById('video_title').textContent = t.video_title;
+      if (!t) return;
+      document.getElementById("name").textContent = t.name;
+      document.getElementById("title").textContent = t.title;
+      document.getElementById("semantic_title").textContent = t.semantic_title;
+      document.getElementById("semantic_p1").textContent = t.semantic_p1;
+      document.getElementById("semantic_p2").textContent = t.semantic_p2;
+      document.getElementById("about_title").textContent = t.about_title;
+      document.getElementById("about_text").textContent = t.about_text;
+      document.getElementById("projects_title").textContent = t.projects_title;
+      document.getElementById("project1").textContent = t.project1;
+      document.getElementById("project2").textContent = t.project2;
       document.documentElement.lang = lang;
     }
 
-    // Langue par défaut au chargement
-    setLang('fr');
+    window.addEventListener('DOMContentLoaded', () => setLang('fr'));
   </script>
 </body>
 </html>
