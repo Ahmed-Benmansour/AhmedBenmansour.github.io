@@ -1,99 +1,37 @@
+
 <!DOCTYPE html>
-<html lang="fr" prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/ schema: http://schema.org/">
+
+<html lang="fr" prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/">
 <head>
-  <meta charset="UTF-8" />
-  <title property="dc:title">CV - Ahmed Benmansour</title>
-  <link rel="stylesheet" href="assets/style.css" />
+<meta charset="utf-8"/>
+<title>CV - Ahmed Benmansour</title>
+<link href="assets/style.css" rel="stylesheet"/>
 </head>
-<body typeof="foaf:Person" about="#ahmed">
-  <div class="lang-switch">
-    <a href="index.html">🏠 Accueil</a>
-    <button onclick="setLang('fr')">🇫🇷</button>
-    <button onclick="setLang('en')">🇬🇧</button>
-    <button onclick="setLang('ar')">🇸🇦</button>
-    <button onclick="setLang('ja')">🇯🇵</button>
-  </div>
-
-  <header>
-    <h1 property="foaf:name" id="cv_title">Ahmed Benmansour</h1>
-    <p property="dc:description">Étudiant en 2ᵉ année à Sup Galilée, motivé, en recherche d’un stage international de 8 semaines en informatique orienté data.</p>
-    <p><a href="mailto:ahmed@example.com" property="foaf:mbox">ahmed@example.com</a></p>
-    <p><a href="https://github.com/ahmedbenmansour" property="foaf:homepage">https://github.com/ahmedbenmansour</a></p>
-    <meta property="foaf:based_near" content="Paris, France" />
-  </header>
-
-  <main>
-    <section id="education" typeof="foaf:Document" about="#cv-education">
-      <h2 id="education_title" property="dc:title">Formation</h2>
-      <ul id="education_list">
-        <li typeof="schema:EducationalOccupationalProgram" property="dc:education">
-          <span property="schema:name">Cycle ingénieur informatique</span> –
-          <span property="schema:provider">Sup Galilée</span>,
-          <meta property="schema:startDate" content="2023" />
-          <meta property="schema:endDate" content="2026" />
-        </li>
-        <li typeof="schema:EducationalOccupationalProgram" property="dc:education">
-          <span property="schema:name">Classe préparatoire intégrée</span> –
-          <span property="schema:provider">Sup Galilée</span>,
-          <meta property="schema:startDate" content="2021" />
-          <meta property="schema:endDate" content="2023" />
-        </li>
-      </ul>
-    </section>
-
-    <section id="experience" typeof="foaf:Document" about="#cv-experience">
-      <h2 id="experience_title" property="dc:title">Expériences professionnelles</h2>
-      <ul id="experience_list">
-        <li typeof="schema:WorkExperience" property="dc:description">
-          <span property="schema:jobTitle">Alternant Data Engineer</span> –
-          <span property="schema:worksFor">Groupama</span> (Puteaux),
-          <meta property="schema:startDate" content="2023" />
-        </li>
-        <li typeof="schema:OrganizationRole" property="dc:description">
-          <span property="schema:roleName">Membre BDE</span> –
-          <span property="schema:memberOf">Sup Galilée</span>,
-          <meta property="schema:startDate" content="2023" />
-        </li>
-        <li typeof="schema:WorkExperience" property="dc:description">
-          <span property="schema:jobTitle">Agent de bureau de vote</span> –
-          <span property="schema:worksFor">Mairie de Paris</span>,
-          <meta property="schema:startDate" content="2022" />
-        </li>
-      </ul>
-    </section>
-
-    <section id="skills" typeof="foaf:Document" about="#cv-skills">
-      <h2 id="skills_title" property="dc:title">Compétences</h2>
-      <ul id="skills_list">
-        <li property="dc:subject">Python, Java, Scala, C/C++, SQL, HTML, CSS, JS</li>
-        <li property="dc:subject">Spark, Hadoop, Linux, Git, NextJS, VS Code</li>
-        <li property="dc:subject">Autonomie, travail en équipe, curiosité, créativité</li>
-      </ul>
-    </section>
-
-    <section id="languages" typeof="foaf:Document" about="#cv-languages">
-      <h2 id="languages_title" property="dc:title">Langues</h2>
-      <ul id="languages_list">
-        <li property="dc:language">Français : langue maternelle</li>
-        <li property="dc:language">Anglais : courant</li>
-        <li property="dc:language">Espagnol : intermédiaire</li>
-      </ul>
-    </section>
-
-    <section id="interests" typeof="foaf:Document" about="#cv-hobbies">
-      <h2 property="dc:title">Centres d’intérêt</h2>
-      <ul>
-        <li property="dc:subject">Voyages : Amérique du Nord, Europe, Afrique</li>
-        <li property="dc:subject">Dessin, jeux vidéo, films/séries</li>
-        <li property="dc:subject">Culture japonaise</li>
-      </ul>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 Ahmed Benmansour — RDFa | FOAF | DC | Schema.org</p>
-  </footer>
-
-  <script src="assets/script.js"></script>
+<body about="#ahmed" typeof="foaf:Person">
+<div class="lang-switch">
+<a href="index.html">🏠 Accueil</a>
+<button onclick="setLang('fr')">🇫🇷</button>
+<button onclick="setLang('en')">🇬🇧</button>
+<button onclick="setLang('ar')">🇸🇦</button>
+<button onclick="setLang('ja')">🇯🇵</button>
+</div>
+<h1 id="cv_title" property="foaf:name"></h1>
+<section about="#cv-education" typeof="foaf:Document">
+<h2 id="education_title"></h2>
+<ul data-rdfa-property="dc:education" id="education_list"></ul>
+</section>
+<section about="#cv-experience" typeof="foaf:Document">
+<h2 id="experience_title"></h2>
+<ul data-rdfa-property="dc:description" id="experience_list"></ul>
+</section>
+<section about="#cv-skills" typeof="foaf:Document">
+<h2 id="skills_title"></h2>
+<ul data-rdfa-property="dc:subject" id="skills_list"></ul>
+</section>
+<section about="#cv-languages" typeof="foaf:Document">
+<h2 id="languages_title"></h2>
+<ul data-rdfa-property="dc:language" id="languages_list"></ul>
+</section>
+<script src="assets/script.js"></script>
 </body>
 </html>
