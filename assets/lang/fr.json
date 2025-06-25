@@ -5,25 +5,25 @@
   "cv_title": "Curriculum Vitae",
   "education_title": "Formation",
   "education_list": [
-    "Université Paris 13 – Sup Galilée – ING2 Informatique",
-    "Lycée Jean Zay – CPGE MPSI",
-    "Lycée Paul Éluard – Bac S"
+    "Sup Galilée – Computer Engineer apprentice – 2023/2026",
+    "Sup Galilée – Student in Preparatory Class – 2021/2023",
+    "Rocroy Saint-Vincent de Paul – High School – 2018/2021"
   ],
   "experience_title": "Expériences professionnelles",
   "experience_list": [
-    "Alternant Data Engineer – Groupama",
-    "Membre du BDE – Organisation d’événements",
-    "Agent de bureau de vote – Mairie de Paris"
+    "Data Engineer – Groupama Service Support – Puteaux – 2023 to Today",
+    "Member of Student Association – BDE – Villetaneuse – 2023 to Today",
+    "Polling Station Agent – Mairie de Paris – Paris – 2022"
   ],
   "skills_title": "Compétences",
   "skills_list": [
-    "Langages : Python, C/C++, SQL, Java, Scala, JS, HTML/CSS, Matlab",
-    "Technologies : Spark, Hadoop, Git, NextJS, Linux"
+    "Languages: Python, C/C++, SQL, Java, Scala, Javascript, HTML, CSS, Matlab",
+    "Technologies: Spark, Git, NextJS, Linux, Hadoop environment, Algorithmy"
   ],
   "languages_title": "Langues",
   "languages_list": [
-    "Français : natif",
-    "Anglais : courant",
-    "Espagnol : intermédiaire"
+    "French: native",
+    "English: fluent",
+    "Spanish: intermediate"
   ]
 }
