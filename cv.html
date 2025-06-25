@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr" prefix="foaf: http://xmlns.com/foaf/0.1/ schema: http://schema.org/ vcard: http://www.w3.org/2006/vcard/ns# dbo: http://dbpedia.org/ontology/ dct: http://purl.org/dc/terms/ ">
+<html lang="fr" prefix="foaf: http://xmlns.com/foaf/0.1/ schema: http://schema.org/ vcard: http://www.w3.org/2006/vcard/ns# dct: http://purl.org/dc/terms/ og: http://ogp.me/ns# ">
  <head>
   <meta charset="utf-8"/>
   <title>
@@ -30,28 +30,45 @@
   <section>
    <h2 id="education_title">
    </h2>
-   <ul id="education_list" rel="schema:alumniOf" typeof="schema:EducationalOccupationalCredential">
+   <ul data-rdfa-property="schema:name" data-rdfa-typeof="schema:EducationalOccupationalCredential" id="education_list" rel="schema:alumniOf">
    </ul>
   </section>
   <section>
    <h2 id="experience_title">
    </h2>
-   <ul id="experience_list" rel="schema:hasOccupation" typeof="schema:Role">
+   <ul data-rdfa-property="schema:description" data-rdfa-typeof="schema:Role" id="experience_list" rel="schema:hasOccupation">
    </ul>
   </section>
   <section>
    <h2 id="skills_title">
    </h2>
-   <ul id="skills_list" rel="schema:skills">
+   <ul data-rdfa-property="schema:skills" data-rdfa-typeof="" id="skills_list">
    </ul>
   </section>
   <section>
    <h2 id="languages_title">
    </h2>
-   <ul id="languages_list" rel="schema:knowsLanguage">
+   <ul data-rdfa-property="schema:knowsLanguage" data-rdfa-typeof="" id="languages_list">
    </ul>
   </section>
   <script src="assets/script.js">
+  </script>
+  <script>
+   document.addEventListener("DOMContentLoaded", () => {
+  const applyRDFa = () => {
+    document.querySelectorAll("ul").forEach(ul => {
+      const typeofVal = ul.dataset.rdfaTypeof;
+      const propVal = ul.dataset.rdfaProperty;
+      ul.querySelectorAll("li").forEach(li => {
+        if (typeofVal) li.setAttribute("typeof", typeofVal);
+        if (propVal) li.setAttribute("property", propVal);
+      });
+    });
+  };
+  const observer = new MutationObserver(applyRDFa);
+  observer.observe(document.body, { childList: true, subtree: true });
+  applyRDFa();
+});
   </script>
  </body>
 </html>
