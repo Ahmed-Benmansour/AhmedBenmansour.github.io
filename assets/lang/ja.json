@@ -5,25 +5,25 @@
   "cv_title": "履歴書",
   "education_title": "学歴",
   "education_list": [
-    "Sup Galilée – Computer Engineer apprentice – 2023/2026",
-    "Sup Galilée – Student in Preparatory Class – 2021/2023",
-    "Rocroy Saint-Vincent de Paul – High School – 2018/2021"
+    "Sup Galilée – コンピュータ工学の見習いエンジニア – 2023年～2026年",
+    "Sup Galilée – 予備クラスの学生 – 2021年～2023年",
+    "Rocroy Saint-Vincent de Paul高校 – 高校卒業 – 2018年～2021年"
   ],
   "experience_title": "職務経験",
   "experience_list": [
-    "Data Engineer – Groupama Service Support – Puteaux – 2023 to Today",
-    "Member of Student Association – BDE – Villetaneuse – 2023 to Today",
-    "Polling Station Agent – Mairie de Paris – Paris – 2022"
+    "データエンジニア – Groupamaサービスサポート – プトー – 2023年から現在まで",
+    "学生団体のメンバー – BDE – ヴィレットヌーズ – 2023年から現在まで",
+    "投票所係員 – パリ市役所 – パリ – 2022年"
   ],
   "skills_title": "スキル",
   "skills_list": [
-    "Languages: Python, C/C++, SQL, Java, Scala, Javascript, HTML, CSS, Matlab",
-    "Technologies: Spark, Git, NextJS, Linux, Hadoop environment, Algorithmy"
+    "言語: Python, C/C++, SQL, Java, Scala, Javascript, HTML, CSS, Matlab",
+    "技術: Spark, Git, NextJS, Linux, Hadoop環境, アルゴリズム"
   ],
   "languages_title": "言語",
   "languages_list": [
-    "French: native",
-    "English: fluent",
-    "Spanish: intermediate"
+    "フランス語: ネイティブ",
+    "英語: 流暢",
+    "スペイン語: 中級"
   ]
 }

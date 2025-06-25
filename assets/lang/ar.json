@@ -5,25 +5,25 @@
   "cv_title": "السيرة الذاتية",
   "education_title": "التعليم",
   "education_list": [
-    "Sup Galilée – Computer Engineer apprentice – 2023/2026",
-    "Sup Galilée – Student in Preparatory Class – 2021/2023",
-    "Rocroy Saint-Vincent de Paul – High School – 2018/2021"
+    "سوب غاليلي – متدرب مهندس معلوماتية – 2023/2026",
+    "سوب غاليلي – طالب في القسم التحضيري – 2021/2023",
+    "ثانوية روكروي سان فنسان دي بول – الثانوية العامة – 2018/2021"
   ],
   "experience_title": "الخبرات المهنية",
   "experience_list": [
-    "Data Engineer – Groupama Service Support – Puteaux – 2023 to Today",
-    "Member of Student Association – BDE – Villetaneuse – 2023 to Today",
-    "Polling Station Agent – Mairie de Paris – Paris – 2022"
+    "مهندس بيانات – مجموعة Groupama – بوتو – من 2023 حتى الآن",
+    "عضو في الجمعية الطلابية – BDE – فيليتانوز – من 2023 حتى الآن",
+    "موظف مركز اقتراع – بلدية باريس – باريس – 2022"
   ],
   "skills_title": "المهارات",
   "skills_list": [
-    "Languages: Python, C/C++, SQL, Java, Scala, Javascript, HTML, CSS, Matlab",
-    "Technologies: Spark, Git, NextJS, Linux, Hadoop environment, Algorithmy"
+    "اللغات: Python, C/C++, SQL, Java, Scala, Javascript, HTML, CSS, Matlab",
+    "التقنيات: Spark, Git, NextJS, Linux، بيئة Hadoop، الخوارزميات"
   ],
   "languages_title": "اللغات",
   "languages_list": [
-    "French: native",
-    "English: fluent",
-    "Spanish: intermediate"
+    "الفرنسية: لغة أم",
+    "الإنجليزية: بطلاقة",
+    "الإسبانية: متوسطة"
   ]
 }
